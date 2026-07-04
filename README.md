@@ -2,6 +2,8 @@
 
 I made a tool to check how strong your password it uses HTML, CSS and JavaScript. This Password Strength Checker looks at your password. Tells you how strong it is right away. It checks some security things and gives you a score on a little meter.
 
+https://niran-cy.github.io/password-strength-checker/
+
 ## Features
 
 * The Password Strength Checker looks at your password as you type it
