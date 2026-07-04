@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enterprise Password Checker</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="header-title">
+        <svg class="shield-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path><rect x="10" y="10" width="4" height="5" rx="1"></rect><path d="M12 10v-2a2 2 0 1 1 4 0"></path></svg>
+        <div>
+            <h1>Password Strength Checker</h1>
+            <p>Create a strong password to keep your account secure.</p>
+        </div>
+    </div>
+
+    <div class="dashboard">
+        <div class="panel left-panel">
+            <label>Create Password</label>
+            <div class="input-wrapper">
+                <span class="icon">&#128274;</span>
+                <input type="password" id="password" placeholder="Enter password...">
+                <button id="toggleBtn" class="icon-btn">&#128065;</button>
+            </div>
+            <p class="helper-text">Use at least 8 characters with a mix of letters, numbers & symbols.</p>
+
+            <div class="strength-header">
+                <h3>Password Strength</h3>
+                <span id="strength-percent">0%</span>
+            </div>
+            
+            <div class="progress-bg">
+                <div id="progress-bar"></div>
+            </div>
+
+            <div class="strength-status">
+                <span id="status-badge" class="badge">Weak</span>
+                <span id="status-text">Your password is easy to guess.</span>
+            </div>
+
+            <h3 class="req-title">Requirements</h3>
+            <ul class="requirements-list">
+                <li id="req-length"><span class="check-circle"></span> At least 8 characters</li>
+                <li id="req-upper"><span class="check-circle"></span> Uppercase letter (A-Z)</li>
+                <li id="req-lower"><span class="check-circle"></span> Lowercase letter (a-z)</li>
+                <li id="req-number"><span class="check-circle"></span> Number (0-9)</li>
+                <li id="req-special"><span class="check-circle"></span> Special character (!@#$%^&*)</li>
+            </ul>
+
+            <button class="continue-btn">Continue</button>
+        </div>
+
+        <div class="panel right-panel">
+            <h3 class="panel-subtitle">Estimated crack time</h3>
+            
+            <div class="crack-time-display">
+                <div id="large-shield" class="large-shield red-glow">
+                    <span id="time-icon">⚠</span>
+                </div>
+                <h2 id="crack-time-text">Instantly</h2>
+                <p id="crack-time-desc">It would take a computer no time to crack this password.</p>
+            </div>
+
+            <div class="divider"></div>
+
+            <h3 class="panel-subtitle">Strength guide</h3>
+            <ul class="legend-list">
+                <li><span class="color-line line-red"></span> Weak <span class="legend-pct">0 – 25%</span></li>
+                <li><span class="color-line line-orange"></span> Fair <span class="legend-pct">26 – 50%</span></li>
+                <li><span class="color-line line-blue"></span> Good <span class="legend-pct">51 – 75%</span></li>
+                <li><span class="color-line line-green"></span> Strong <span class="legend-pct">76 – 100%</span></li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="footer-note">
+        &#128274; Your security is our priority.
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
